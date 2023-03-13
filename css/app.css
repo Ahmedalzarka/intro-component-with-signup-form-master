@@ -98,7 +98,13 @@ input:focus{
     outline: none;
     border: 2px solid var(--purple-color);
 }
-
+.invalid{
+    border: 2px solid var(--pink-color);
+    color: var(--pink-color);
+}
+.invalid::placeholder{
+    color:var(--pink-color);
+}
 button{
     padding: 15px 0;
     color: white;
