@@ -38,10 +38,8 @@ body{
     padding: 5% 10%;
 }
 .container{
-    width: 1100px;
-    height: 550px;
     display: flex;
-    gap: 50px   ;
+    gap: 50px;
 }
 .left{
     display: flex;
@@ -49,7 +47,6 @@ body{
     align-items: center;
     justify-content: center;
     max-width: 525px;
-    height: 220;
 }
 .left h1{
     font-size: var(--heading-font-size);
@@ -94,8 +91,12 @@ input{
     color: black;
     font-size: var(--form-font-size);
     font-weight: var(--form-font-weight);
-    border: 2px solid var(--dark-purple-color);
+    border: 1px solid var(--dark-purple-color);
     border-radius: 5px;
+}
+input:focus{
+    outline: none;
+    border: 1px solid var(--purple-color);
 }
 .input-field{
     position: relative;
@@ -114,10 +115,6 @@ input{
     font-weight: 500;
     font-style: italic;
     opacity: 0;
-}
-input:focus{
-    outline: none;
-    border: 2px solid var(--purple-color);
 }
 .invalid{
     border: 2px solid var(--pink-color);
@@ -163,7 +160,8 @@ form span{
     .container{
         flex-direction: column;
         align-items: center;
-        justify-content: center
+        justify-content: center;
+        gap: 0;
     }
     .left p, h1{
         text-align: center;
@@ -188,5 +186,8 @@ form span{
     .trial{
         margin-top: 64px;
         width:330px;
+    }
+    form{
+        padding:24px;
     }
 }
