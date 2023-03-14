@@ -35,7 +35,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 121px 165px;
+    padding: 5% 10%;
 }
 .container{
     width: 1100px;
