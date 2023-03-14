@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
   <link rel="stylesheet" href="css/app.css">
-  <script src="js/app.js"></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body background="images/bg-intro-desktop.png">
   <div class="container">
@@ -21,18 +21,29 @@
       <div class="trial">
         <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
       </div>
-      <form>
-        <input class="valid" id="fname" type="text" placeholder="First Name">
-        <input class="valid" id="lname" type="text" placeholder="Last Name">
-        <input class="valid" id="email" type="email" placeholder="Email Address">
-        <input class="valid" id="password" type="password" placeholder="Password">
-        <!-- invalid -->
-        <input class="invalid hidden" type="text" placeholder="">
-        <input class="invalid hidden" type="text" placeholder="">
-        <input class="invalid hidden" type="email" placeholder="email@example/com">
-        <input class="invalid hidden" type="password" placeholder="">
-        <button id="btn">claim your free trial</button>
-        <p>By clicking the button, you are agreeing to our <a href="#"><span>Terms and Services</span></a></p>
+      <form action="#">
+        <div class="input-field">
+          <input id="fname" type="text" placeholder="First Name">
+          <img class="icon-error" src="images/icon-error.svg" alt="icon-error">
+          <p class="text-error">First Name cannot be empty</p>
+        </div>
+        <div class="input-field">
+          <input id="lname" type="text" placeholder="Last Name">
+          <img class="icon-error" src="images/icon-error.svg" alt="icon-error">
+          <p class="text-error">Last Name cannot be empty</p>
+        </div>
+        <div class="input-field">
+          <input id="email" type="email" placeholder="Email Address">
+          <img class="icon-error" src="images/icon-error.svg" alt="icon-error">
+          <p class="text-error">Looks like this is not an email</p>
+        </div>
+        <div class="input-field">
+          <input id="password" type="password" placeholder="Password">
+          <img class="icon-error" src="images/icon-error.svg" alt="icon-error">
+          <p class="text-error">Password cannot be empty</p>
+        </div>
+        <button type="submit" id="btn">claim your free trial</button>
+        <p id="terms">By clicking the button, you are agreeing to our <a href="#"><span>Terms and Services</span></a></p>
       </form>
     </div>
   </div>
